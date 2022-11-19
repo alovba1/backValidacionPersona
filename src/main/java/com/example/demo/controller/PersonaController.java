@@ -20,13 +20,13 @@ public class PersonaController {
 	@Autowired
 	PersonaService personaService;
 	
-	//@GetMapping(value = "/all")
-	@GetMapping
+	@GetMapping(value = "/all")
+	//@GetMapping
 	public List<Persona>getPersona(){
 		return personaService.getAllPersonas();
 	}
-	//@PostMapping(value = "/save")
-	@PostMapping
+	@PostMapping(value = "/save")
+	//@PostMapping
 	public Persona add(@RequestBody Persona p ){
 		   return personaService.add(p);
     }
